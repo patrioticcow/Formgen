@@ -1,0 +1,92 @@
+<div class="span5">
+    <div class="well sidebar-nav">
+        <ul class="nav nav-tabs" id="add_form_element">
+			<li><a href="#tab_field" data-toggle="tab">Add a Field</a></li>
+			<li><a href="#tab_field_prop" data-toggle="tab">Field Prop.</a></li>
+			<li><a href="#tab_form_prop" data-toggle="tab">Form Prop.</a></li>
+		</ul>
+		<div class="tab-content">
+		  	<div class="tab-pane active" id="tab_field">
+		  		<table class="table table-hover">
+		  			<tr>
+		  				<td><div class="btn btn-info btn-block" id="single_line_text">Single Line Text</div></td>
+		  				<td><div class="btn btn-info btn-block" id="line_number">Number</div></td>
+		  			</tr>
+		  			<tr>
+		  				<td><div class="btn btn-info btn-block" id="line_paragraph">Paragraph Text</div></td>
+		  				<td><div class="btn btn-info btn-block" id="line_checkbox">Checkboxes</div></td>
+		  			</tr>
+		  			<tr>
+		  				<td><div class="btn btn-info btn-block" id="line_radio">Multiple Choices</div></td>
+		  				<td><div class="btn btn-info btn-block" id="line_dropdown">Drop Down</div></td>
+		  			</tr>
+		  			<tr>
+		  				<td><div class="btn btn-info btn-block" id="line_password">Password</div></td>
+		  				<td><div class="btn btn-info btn-block" id="line_password_verify">Password Verify</div></td>
+		  			</tr>
+                    <tr>
+		  				<td><div class="btn btn-info btn-block" id="line_email">Email</div></td>
+		  				<td><div class="btn btn-info btn-block" id="line_date">Date</div></td>
+		  			</tr>
+		  			<tr>
+                        <td><div class="btn btn-info btn-block" id="line_upload">File Upload</div></td>
+		  				<td><div class="btn btn-info btn-block" id="line_phone">Phone</div></td>
+		  			</tr>
+		  			<tr>
+		  				<td><div class="btn btn-info btn-block" id="line_credit_card">Credit Card</div></td>
+		  				<td><div class="btn btn-info btn-block" id="line_url">Web Site / Url</div></td>
+		  			</tr>
+		  			<tr>
+		  				<td><div class="btn btn-info btn-block disabled" id="line_captcha">Captcha</div></td>
+		  				<td><div class="btn btn-info btn-block" id="line_hidden">Hidden</div></td>
+		  			</tr>
+		  			<tr>
+		  				<td><div class="btn btn-info btn-block disabled" id="line_zip">Zip</div></td>
+		  				<td></td>
+		  			</tr>
+		  		</table>
+		  	</div>
+		  	<div class="tab-pane" id="tab_field_prop">
+		  		<div id="field_properties"></div>
+		  	</div>
+		  	<div class="tab-pane" id="tab_form_prop">
+		  		<h3>Form Properties</h3>
+                <form>
+                    <ul class="nav nav-list">
+                        <li>
+                            <label>Form Title</label>
+                            <input type="text" name="form_title" maxlength="255" value="Untitled Form">
+                        </li>
+                        <li>
+                            <label>Description</label>
+                            <input type="text" name="form_description" maxlength="255" value="This is your form description.">
+                        </li>
+                        <li>
+                            <label>Form Namespace</label>
+                            <input type="text" name="form_namespace" maxlength="255" placeholder="ModuleName">
+                        </li>
+                        <li>
+                            <label>Form Class Name</label>
+                            <input type="text" name="form_class_name" maxlength="255" placeholder="NewForm">
+                        </li>
+                        <li>
+                            <label>Model Name</label>
+                            <input type="text" name="form_model" maxlength="255" placeholder="User">
+                        </li>
+                        <li>
+                            <label>Class</label>
+                            <input type="text" name="form_class" maxlength="255" placeholder="class1 class2..">
+                        </li>
+                        <li>
+                            <label>Id</label>
+                            <input type="text" name="form_id" maxlength="255" placeholder="custom id">
+                        </li>
+                        <li>
+                            <button class="btn btn-primary" id="add_form_properties">Save</button>
+                        </li>
+                    </ul>
+                </form>
+		  	</div>
+		</div>
+    </div>
+</div>

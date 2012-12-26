@@ -1,0 +1,205 @@
+<?= '<h3>'.$this->result->name.'</h3>'; ?>
+
+<form action="/form" method="post" name="add_form_data" id="add_form_data" class="<?= $this->result->id; ?>">
+	<ul class="nav nav-list">
+		<li>
+			<label>File Upload Name</label>
+			<input type="text" name="input_name" maxlength="255" value="file">
+		</li>
+        <li>
+			<label>Replace Label Text</label>
+			<input type="text" name="text_label" maxlength="255" value="File Upload">
+		</li>
+		<li>
+			<label>Required</label>
+			<select name="required">
+				<option value="no">No</option>
+				<option value="yes">Yes</option>
+			</select>
+		</li>
+        <li>
+            <label>Class</label>
+            <input type="text" name="number_class" maxlength="255" placeholder="class1 class2..">
+        </li>
+        <li>
+            <label>Id</label>
+            <input type="text" name="number_id" maxlength="255" placeholder="custom id">
+        </li>
+        <li>
+            <label>Validators
+                <small>(<a href="https://unofficial-zf2.readthedocs.org/en/latest/modules/zend.file.transfer.validators.html?highlight=php#" target="_blank">more..</a>)</small>
+            </label>
+            <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseZero">
+                            Size
+                        </a>
+                    </div>
+                    <div id="collapseZero" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The Size validator checks for the size of a single file.</small><br>
+                            <input type="text" name="upload_filesize_min" class="input-small" placeholder="10kB">
+                            <input type="text" name="upload_filesize_max" class="input-small" placeholder="4MB">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                            File Size
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The FilesSize validator checks for the aggregate size of all transferred files.</small><br>
+                            <input type="number" name="upload_filefilessize_min" class="input-small" placeholder="min">
+                            <input type="number" name="upload_filefilessize_max" class="input-small" placeholder="max">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                            Images Count
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The Count validator checks for the number of files which are provided.</small><br>
+                            <input type="number" name="upload_filecount_min" class="input-small" placeholder="min">
+                            <input type="number" name="upload_filecount_max" class="input-small" placeholder="max">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                            File Exclude Extension
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The ExcludeExtension validator checks the file extension of the specified files.</small>
+                            <input type="text" name="upload_fileexcludeextension" placeholder="jpeg, mov, txt">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFourr">
+                            File Mime Type
+                        </a>
+                    </div>
+                    <div id="collapseFourr" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The MimeType validator checks the MIME type of transferred files.</small>
+                            <input type="text" name="upload_filemimetype" placeholder="image, audio, video, text">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                            Exclude Mime Type
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The ExcludeMimeType validator checks the MIME type of transferred files.</small>
+                            <input type="text" name="upload_fileexcludemimetype" placeholder="image, audio, video, text">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                           File Exists
+                        </a>
+                    </div>
+                    <div id="collapseFive" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The Exists validator checks for the existence of specified files.
+                                To check in multiple folders add the locations separated by coma</small>
+                            <input type="text" name="upload_fileexists" placeholder="\home\images, \home\uploads">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                           File Extension
+                        </a>
+                    </div>
+                    <div id="collapseSix" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The Extension validator checks the file extension of the specified files.</small>
+                            <input type="text" name="upload_fileextension" placeholder="jpeg, png">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
+                           Image Size
+                        </a>
+                    </div>
+                    <div id="collapseSeven" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The ImageSize validator checks the size of image files.</small><br>
+                            <input type="number" name="upload_fileimagesize_minheight" class="input-small" placeholder="min height">
+                            <input type="number" name="upload_fileimagesize_maxheight" class="input-small" placeholder="max height">
+                            <input type="number" name="upload_fileimagesize_minwidth" class="input-small" placeholder="min width">
+                            <input type="number" name="upload_fileimagesize_maxwidth" class="input-small" placeholder="max width">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseEight">
+                           Image Is Compressed
+                        </a>
+                    </div>
+                    <div id="collapseEight" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The IsCompressed validator checks if a transferred file is a compressed archive, such as zip or arc.</small>
+                            <input type="text" name="upload_fileiscompressed" placeholder="zip">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseNine">
+                           Is Image
+                        </a>
+                    </div>
+                    <div id="collapseNine" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The IsImage validator checks if a transferred file is a image file, such as gif or jpeg.</small>
+                            <input type="text" name="upload_fileisimage" placeholder="jpeg">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTen">
+                           Word Count
+                        </a>
+                    </div>
+                    <div id="collapseTen" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <small>The WordCount validator checks for the number of words within provided files.</small>
+                            <input type="number" name="upload_filewordcount_min" class="input-small" placeholder="min">
+                            <input type="number" name="upload_filewordcount_max" class="input-small" placeholder="max">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+		<li>
+			<button class="btn btn-primary" id="add_form_fileupload">Save</button>
+		</li>
+	</ul>
+</form>
+
+<?= '<code>'.$this->result->id.'</code>'; ?>

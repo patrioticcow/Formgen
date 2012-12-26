@@ -1,0 +1,19 @@
+<?php
+
+$form = $this->form;
+$form->prepare();
+
+$form->setAttribute('action', $this->url('formgen/test'));
+
+echo $this->form()->openTag($form);
+    echo $this->formRow($form->get('text'));
+    echo "<br>";
+    echo $this->formSubmit($form->get('submit'));
+
+echo $this->formLabel($form->get('text')) ;
+echo $this->formInput($form->get('text')) ;
+echo $this->formElementErrors($form->get('text')) ;
+
+//echo $this->formRow($form->get('text')) . PHP_EOL;
+
+echo $this->form()->closeTag();
