@@ -7,7 +7,7 @@ This is an attempt to create a easy to use Zend From Generator
 
 Disclaimer
 ----------
-The module is in Alpha, some orrors might occur. 
+The module is in Alpha, some errors might occur. 
 Also this module is not necesarily made to be included in your application. 
 
 Example:
